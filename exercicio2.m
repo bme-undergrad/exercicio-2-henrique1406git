@@ -1,6 +1,6 @@
 function [blendA, blendB] = exercicio2(NG)
 
-% NG: numero do grupo
+% NG: 7
 
 % nao alterar: inicio
 es = 1;
@@ -10,7 +10,24 @@ pkg load optim
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% digite seu codigo aqui
+f = [10, NG*2]'; #' é dizer que o vetor que eu coloquei é coluna
+x0 = [1,1];
+
+
+A = [0.3, 0.2;
+     0.2, 0.25;
+     0.25, 0.3];
+
+b=[15;
+  10;
+  12];
+
+Aeq = zeros(1,2);
+beq = 0;
+x_min_valores = zeros(2,1);
+x_max_valores = [20; 50];
+
+[x, fval] = linprog(f, -A, -b, Aeq, beq, lb=x_min_valores, ub=x_max_valores);
 
 
 % mantenha essas duas linhas finais
