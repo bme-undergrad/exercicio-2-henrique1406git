@@ -27,7 +27,7 @@ beq = 0;
 x_min_valores = zeros(2,1);
 x_max_valores = [20; 50];
 
-[x, fval] = linprog(f, -A, -b, Aeq, beq, lb=x_min_valores, ub=x_max_valores);
+[x] = linprog(f, -A, -b, Aeq, beq, lb=x_min_valores, ub=x_max_valores)
 
 
 % mantenha essas duas linhas finais
