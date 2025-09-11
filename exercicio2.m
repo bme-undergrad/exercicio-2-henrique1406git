@@ -1,4 +1,4 @@
-function [blendA, blendB] = exercicio2(NG)
+function [blendA, blendB] = exercicio2(NG) 
 
 % NG: 7 
 
